@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Учет занятости аудиторий</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Учет занятости аудиторий</h1>
+        </header>
+        
+        <main>
+            <section class="classrooms-section">
+                <h2>Аудитории</h2>
+                <div class="add-classroom">
+                    <input type="text" id="classroomNumber" placeholder="Номер аудитории">
+                    <input type="number" id="classroomCapacity" placeholder="Вместимость">
+                    <button onclick="addClassroom()">Добавить аудиторию</button>
+                </div>
+                <div id="classroomsList" class="classrooms-list"></div>
+            </section>
+
+            <section class="schedule-section">
+                <h2>Расписание</h2>
+                <div class="add-schedule">
+                    <select id="classroomSelect"></select>
+                    <input type="datetime-local" id="startTime">
+                    <input type="datetime-local" id="endTime">
+                    <input type="text" id="subject" placeholder="Предмет">
+                    <input type="text" id="teacher" placeholder="Преподаватель">
+                    <input type="text" id="group" placeholder="Группа">
+                    <button onclick="addSchedule()">Добавить занятие</button>
+                </div>
+                <div id="scheduleList" class="schedule-list"></div>
+            </section>
+        </main>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html> 
